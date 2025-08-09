@@ -35,6 +35,7 @@ export class TimerBar extends Actor {
   }
 
   onPreUpdate(engine: Engine, elapsed: number): void {
+    if (this.isPaused) return;
     if (!this.isPaused) this.timeRemaining -= elapsed;
     let percentTimeRemaining = this.timeRemaining / 6000;
     this.scale.x = percentTimeRemaining;
