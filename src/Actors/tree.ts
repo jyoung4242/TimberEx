@@ -2,6 +2,7 @@ import { Actor, Random, vec } from "excalibur";
 import { Resources } from "../resources";
 import { Branch } from "./branch";
 import { Signal } from "../Lib/Signals";
+import { showMessage } from "../UI/UI";
 
 export class Tree extends Actor {
   rng: Random;
@@ -53,11 +54,9 @@ export class Tree extends Actor {
     } else {
       this.branches[0] = null;
     }
-    this.branches.forEach((branch, index) => {
-      console.log(`Branch ${index}:`, branch ? branch.direction : "None");
-    });
 
     if (this.branches[4] && (this.branches[4] as Branch).direction === playerside) {
+      showMessage("SQUISHED!!");
       this.gameOverSignal.send(); // Send game over signal if player hits the branch
       return;
     }

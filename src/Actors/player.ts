@@ -54,6 +54,8 @@ export class Player extends Actor {
 
   onKeyDown = (e: KeyEvent): void => {
     if (!this.isPaused) {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return; // Only handle left/right arrow keys
+
       switch (e.key) {
         case "ArrowLeft":
           this.side = "left";
