@@ -35,9 +35,9 @@ In **TimberEx**, you’re a skilled lumberjack with one goal: chop down the tree
 
 ---
 
-## 📸 Screenshots / GIFs
-
-tbd
+![Gameplay Screenshot 1](SS.png)
+![Gameplay Screenshot 2](SS1.png)
+![Gameplay Screenshot 3](ss2.png)
 
 ---
 
